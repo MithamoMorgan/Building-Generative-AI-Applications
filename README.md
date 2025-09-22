@@ -19,3 +19,5 @@ It helps you:
 2. Build software faster by automating things you usually have to code by hand.</br>
 
 3. Work smoothly with Python, so you don’t have to start from scratch.</br>
+
+Jac allows you to easily use large language models (like GPT) in your code by replacing complicated code with a call to the LLM. This simplifies the process, eliminating the need for detailed prompt creation or using extra libraries to make the LLM work.
