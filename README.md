@@ -10,9 +10,7 @@ Jaseci serves as the implementation stack for the Jac programming language, and 
 
 ### What is Jac?
 
-Jac is a new kind of programming language. It's built on top of Python, so you can still use Python code and tools with it.
-
-But Jac adds some new features that make programming easier and smarter, especially for modern tasks like AI development.
+Jac is a new kind of programming language. It's built on top of Python, so you can still use Python code and tools with it. But Jac adds some new features that make programming easier and smarter, especially for modern tasks like AI development.
 
 It helps you:
 
