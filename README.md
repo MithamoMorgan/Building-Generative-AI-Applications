@@ -23,9 +23,10 @@ It helps you:
 Jac allows you to easily use large language models (like GPT) in your code by replacing complicated code with a call to the LLM. This simplifies the process, eliminating the need for detailed prompt creation or using extra libraries to make the LLM work.
 
 # Week 1: Medical Symptom Diagnosis System in Jac
+
 ![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/raw/main/first_aid_kit.jpg)
 
-## Task
+## About
 
 I have developed a **medical symptom diagnosis system** using **Jac**. The program models patient data and generates a possible diagnosis with treatment advice using an **LLM**. Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/diagnosis.jac).
 
