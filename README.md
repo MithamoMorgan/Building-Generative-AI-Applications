@@ -53,3 +53,11 @@ The system uses **Gemini LLM** (via the `byLLM` plugin) to process the patient d
 
 ```bash
 pip install byllm
+```
+
+2. Set your Gemini API key as an environment variable:
+
+```bash
+export GEMINI_API_KEY="YOUR_API_KEY_HERE"
+```
+
