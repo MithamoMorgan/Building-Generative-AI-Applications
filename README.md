@@ -61,3 +61,9 @@ pip install byllm
 export GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```
 
+3. Run the Jac Program
+
+```bash
+jac run diagnosis.jac
+```
+
