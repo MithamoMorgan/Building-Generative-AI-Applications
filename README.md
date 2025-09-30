@@ -68,7 +68,7 @@ jac run diagnosis.jac
 ```
 ## Example Output
 
-```bash
+```text
 Your Results:
 Possible viral infection (e.g., influenza or common cold)
 
