@@ -21,3 +21,7 @@ It helps you:
 3. Work smoothly with Python, so you don’t have to start from scratch.</br>
 
 Jac allows you to easily use large language models (like GPT) in your code by replacing complicated code with a call to the LLM. This simplifies the process, eliminating the need for detailed prompt creation or using extra libraries to make the LLM work.
+
+### Week 1 Assignment
+
+I have successfully built a medical diagnosis program in jac that has 4 nodes namely, Patient, Age, Gender, and Symptoms where Patient is the parent node. 
