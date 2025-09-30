@@ -22,6 +22,34 @@ It helps you:
 
 Jac allows you to easily use large language models (like GPT) in your code by replacing complicated code with a call to the LLM. This simplifies the process, eliminating the need for detailed prompt creation or using extra libraries to make the LLM work.
 
-### Week 1 Assignment
+# Week 1: Medical Symptom Diagnosis System in Jac
 
-I have successfully built a medical diagnosis program in jac that has 4 nodes namely, Patient, Age, Gender, and Symptoms where Patient is the parent node. 
+## Assignment
+
+I have developed a **medical symptom diagnosis system** using **Jac**. The program models patient data and generates a possible diagnosis with treatment advice using an **LLM**.
+
+### Program Structure
+
+**Nodes:**
+
+- `Patient` (parent node)  
+- `Age` (child of Patient)  
+- `Gender` (child of Patient)  
+- `Symptoms` (child of Patient)  
+
+**Walker:**
+
+- `Doctor` — collects information from the nodes, calls an LLM model, and generates a diagnosis along with treatment suggestions.
+
+The system uses **Gemini LLM** (via the `byLLM` plugin) to process the patient data and provide responses.
+
+> **Note:** The advice is for educational purposes only and is **not a substitute for professional medical care**.
+
+---
+
+## How to Run
+
+1. Install the `byLLM` plugin:
+
+```bash
+pip install byllm
