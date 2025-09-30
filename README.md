@@ -66,4 +66,20 @@ export GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```bash
 jac run diagnosis.jac
 ```
+## Example Output
+
+Your Results:
+Possible viral infection (e.g., influenza or common cold)
+
+* Rest: Ensure the child gets plenty of rest.
+* Hydration: Encourage frequent fluids.
+* Fever management: Administer age-appropriate doses of acetaminophen or ibuprofen.
+* Symptom relief: Saline drops or humidifier for nasal congestion.
+* Nutrition: Offer easily digestible foods.
+* Isolation: Keep the child home from school.
+* Monitoring: Watch for worsening symptoms.
+* Follow-up: Consult a healthcare provider if symptoms persist.
+
+**Disclaimer:** This information is not a substitute for professional medical advice.
+
 
