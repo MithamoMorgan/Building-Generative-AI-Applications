@@ -68,6 +68,7 @@ jac run diagnosis.jac
 ```
 ## Example Output
 
+```bash
 Your Results:
 Possible viral infection (e.g., influenza or common cold)
 
@@ -81,5 +82,6 @@ Possible viral infection (e.g., influenza or common cold)
 * Follow-up: Consult a healthcare provider if symptoms persist.
 
 **Disclaimer:** This information is not a substitute for professional medical advice.
+```
 
 
