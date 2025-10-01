@@ -7,19 +7,19 @@ glob llm = Model(model_name="gemini/gemini-2.0-flash");
 node Patient{}
 
 node Age(Patient){
-    has age: int = 10;
+    has age: int;
     can check with Doctor entry {
         visitor.data["age"] = self.age;
     }
 }
 node Gender(Patient){
-    has gender: str = "Male";
+    has gender: str;
     can check with Doctor entry {
         visitor.data["gender"] = self.gender;
     }
 }
 node Symptoms(Patient){
-    has symptoms: str = "headache, fever, fatigue";
+    has symptoms: str;
     can check with Doctor entry {
         visitor.data["symptoms"] = self.symptoms;
     }
@@ -49,10 +49,17 @@ walker Doctor{
 }
 
 with entry {
-    root ++> Age();
-    root ++> Gender();
-    root ++> Symptoms();
-    root ++> Record();   
+
+    # Ask user for input
+    user_age = input("Enter patient age: ");
+    user_gender = input("Enter patient gender (Male/Female): ");
+    user_symptoms = input("Enter symptoms (comma-separated): ");
+
+    # Create nodes with user input
+    root ++> Age(age=int(user_age));
+    root ++> Gender(gender=user_gender);
+    root ++> Symptoms(symptoms=user_symptoms);
+    root ++> Record();  
 
     agent = Doctor() spawn root;
     print("Your Results:");
