@@ -49,7 +49,11 @@ jac streamlit diagnosis.jac
 ```
 ## 🖥 Example with screenshots
 
+### Step1:
+
 ![patient data](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
+
+### Step 2:
 
 ![results](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/results.jpg)
 
