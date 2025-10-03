@@ -50,10 +50,12 @@ jac streamlit diagnosis.jac
 ## 🖥 Example with screenshots
 
 ### Entered the following data:
-![First Aid Kit](github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
+
+![patient data](github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
 
 ### Got the following output
-![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/results.jp)
+
+![results](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/results.jpg)
 
 
 
