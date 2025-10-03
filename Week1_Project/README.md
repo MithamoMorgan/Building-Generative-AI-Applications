@@ -1,6 +1,6 @@
 # Week 1: Medical Symptom Diagnosis System in Jac
 
-![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/first_aid_kit.jpg)
+![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/diagnosis.jac)
 
 ## About
 
