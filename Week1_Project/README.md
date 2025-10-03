@@ -1,4 +1,4 @@
-# Medical Symptom Diagnosis System in Jac
+# Medical Symptom Diagnosis System
 
 ![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/first_aid_kit.jpg)
 
