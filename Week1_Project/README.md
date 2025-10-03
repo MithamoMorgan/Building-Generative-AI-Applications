@@ -4,7 +4,7 @@
 
 ## About
 
-I have developed a medical symptom diagnosis system using Jac. The program prompts the user to enter age, gender, and symptoms from the command line. It models patient data and generates a possible diagnosis along with treatment advice using a large language model (LLM). Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/diagnosis.jac).
+This week I have developed a medical symptom diagnosis system using Jac, which I initially designed to prompt the user for age, gender, and symptoms from the command line. I have now updated the code to use a Streamlit app, where the user can enter these details through a web interface and has the option to download the output as a PDF. The system models patient data and generates a possible diagnosis along with treatment advice using a large language model (LLM).Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/diagnosis.jac).
 
 
 ### Program Structure
