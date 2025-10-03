@@ -33,6 +33,7 @@ The system uses **Gemini LLM** (via the `byLLM` plugin) to process the patient d
 ```bash
 pip install byllm
 pip install jac-streamlit
+pip install fpdf
 ```
 
 2. Set your Gemini API key as an environment variable:
