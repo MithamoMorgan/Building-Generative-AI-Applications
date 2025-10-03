@@ -49,7 +49,7 @@ jac streamlit diagnosis.jac
 ```
 ## 🖥 Example with screenshots
 
-![patient data](github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
+![patient data](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
 
 ![results](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/results.jpg)
 
