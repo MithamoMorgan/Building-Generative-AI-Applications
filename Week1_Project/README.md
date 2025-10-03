@@ -28,7 +28,7 @@ The system uses **Gemini LLM** (via the `byLLM` plugin) to process the patient d
 
 ## 🚀 How to Run
 
-1. Install the `byLLM` plugin:
+1. requirements:
 
 ```bash
 pip install byllm
