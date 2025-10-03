@@ -47,20 +47,14 @@ export GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```bash
 jac streamlit diagnosis.jac
 ```
-## 🖥 Example Output
+## 🖥 Example with screenshots
 
-```text
-Your Results:
-Possible viral infection (e.g., influenza or common cold)
+### Entered the following data:
+![First Aid Kit](github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/patient_data.jpg)
 
-* Rest: Ensure the child gets plenty of rest.
-* Hydration: Encourage frequent fluids.
-* Fever management: Administer age-appropriate doses of acetaminophen or ibuprofen.
-* Symptom relief: Saline drops or humidifier for nasal congestion.
-* Nutrition: Offer easily digestible foods.
-* Isolation: Keep the child home from school.
-* Monitoring: Watch for worsening symptoms.
-* Follow-up: Consult a healthcare provider if symptoms persist.
+### Got the following output
+![First Aid Kit](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week1_Project/results.jp)
 
-**Disclaimer:** This information is not a substitute for professional medical advice.
-```
+
+
+
