@@ -22,11 +22,11 @@ This week I have developed a medical symptom diagnosis system using Jac, which I
 
 The system uses **Gemini LLM** (via the `byLLM` plugin) to process the patient data and provide responses.
 
-> **Note:** The advice is for educational purposes only and is **not a substitute for professional medical care**.
+ ⚠️ **Note:** The advice is for educational purposes only and is **not a substitute for professional medical care**.
 
 ---
 
-## How to Run
+## 🚀 How to Run
 
 1. Install the `byLLM` plugin:
 
@@ -47,7 +47,7 @@ export GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```bash
 jac streamlit diagnosis.jac
 ```
-## Example Output
+## 🖥 Example Output
 
 ```text
 Your Results:
