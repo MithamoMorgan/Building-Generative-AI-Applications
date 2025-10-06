@@ -3,3 +3,8 @@ This morning, I converted last week’s project, diagnosis.jac, into a server ap
 
 By the end of this week, my goal is to build a complete web application powered by the above Jac REST API.
 Instead of using Streamlit for the user interface, I plan to integrate modern web technologies — including HTML, CSS, JavaScript, and Bootstrap — to create a more interactive and professional front end.
+
+### Run the code
+```bash
+jac serve server.jac
+```
