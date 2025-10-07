@@ -4,7 +4,7 @@ In this folder, I store examples and explanations to understand `Object Spatial 
 
 ### Example 1:
 
-```
+```bash
 node Host{
     has name: str;
     can welcome with Visitor entry{
