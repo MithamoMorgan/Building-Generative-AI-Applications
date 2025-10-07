@@ -2,7 +2,7 @@
 
 In this folder, I store examples and explanations to understand `Object Spatial Programming` by understanding the workflow using simple but powerful examples.
 
-### Example 1:
+### Example 1- Bidirectional Polymorphism:
 
 ```bash
 node Host{
@@ -30,3 +30,8 @@ with entry{
     root spawn Visitor();
 }
 ```
+
+### Note
+
+1. `root spawn Visitor()`: Tells the walker to start at root.
+2. `can start with 'root entry{}`: You have to define what happens when walker starts at root since we spawned at root; move from `root` to `alice`.
