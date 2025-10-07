@@ -35,3 +35,4 @@ with entry{
 
 1. `root spawn Visitor()`: Tells the walker to start at root.
 2. `can start with 'root entry{}`: You have to define what happens when walker starts at root since we spawned at root; move from `root` to `alice`.
+3. `here`- The current node the walker is in.
