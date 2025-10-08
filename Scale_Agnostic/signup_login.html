@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShambaHive | Account Access</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('images/hero-bg.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .auth-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .auth-card h2 {
+      color: #2d6a4f;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn-main {
+      background-color: #ffd60a;
+      color: #000;
+      border-radius: 25px;
+      padding: 10px;
+      font-weight: 600;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .btn-main:hover {
+      background-color: #ffca3a;
+      color: #000;
+    }
+
+    .toggle-link {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #2d6a4f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toggle-link:hover {
+      text-decoration: underline;
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-check-label {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Make the checkbox tick green */
+    .form-check-input:checked {
+      background-color: #2d6a4f;
+      border-color: #2d6a4f;
+    }
+
+    /* Optional: keep the hover outline green */
+    .form-check-input:focus {
+      border-color: #2d6a4f;
+      box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth-card">
+
+    <!-- LOGIN SECTION -->
+    <div id="login-section" class="form-section active">
+      <h2>Welcome Back</h2>
+      <p class="small-text mb-4">Login to your ShambaHive account</p>
+
+      <form>
+        <input type="email" class="form-control" placeholder="Email address" required>
+        <input type="password" class="form-control" placeholder="Password" required>
+
+        <div class="form-check text-start mb-3">
+          <input class="form-check-input" type="checkbox" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-main mt-2">Login</button>
+      </form>
+
+      <p class="toggle-link" onclick="showSection('forgot')">Forgot password?</p>
+      <p class="toggle-link" onclick="showSection('signup')">Don’t have an account? Sign up</p>
+    </div>
+
+    <!-- SIGNUP SECTION -->
+    <div id="signup-section" class="form-section">
+      <h2>Create Account</h2>
+      <p class="small-text mb-4">Join the ShambaHive community today</p>
+
+      <form>
+        <input type="text" class="form-control" placeholder="First Name" required>
+        <input type="text" class="form-control" placeholder="Last Name" required>
+        <input type="email" class="form-control" placeholder="Email address" required>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" required>
+        <button type="submit" class="btn btn-main mt-2">Sign Up</button>
+      </form>
+
+      <p class="toggle-link" onclick="showSection('login')">Already have an account? Login</p>
+    </div>
+
+    <!-- FORGOT PASSWORD SECTION -->
+    <div id="forgot-section" class="form-section">
+      <h2>Reset Password</h2>
+      <p class="small-text mb-4">Enter your email and we’ll send a reset link.</p>
+
+      <form>
+        <input type="email" class="form-control" placeholder="Email address" required>
+        <button type="submit" class="btn btn-main mt-2">Send Reset Link</button>
+      </form>
+
+      <p class="toggle-link" onclick="showSection('login')">Back to Login</p>
+    </div>
+
+  </div>
+
+  <script>
+    function showSection(section) {
+      document.querySelectorAll('.form-section').forEach(div => div.classList.remove('active'));
+      document.getElementById(section + '-section').classList.add('active');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash;
+      if (hash === '#signup-section') {
+        showSection('signup');
+      } else if (hash === '#forgot-section') {
+        showSection('forgot');
+      } else {
+        showSection('login');
+      }
+    });
+
+    // LOGIN FORM
+    const loginForm = document.querySelector("#login-section form");
+    loginForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value.trim();
+      const password = this.querySelector('input[type="password"]').value.trim();
+
+      const savedUser = JSON.parse(localStorage.getItem('shambaUser'));
+      if(savedUser && savedUser.email === email && savedUser.password === password) {
+        // store in sessionStorage to use in home.html
+        sessionStorage.setItem('loggedUser', JSON.stringify(savedUser));
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid email or password!");
+      }
+    });
+
+    // SIGNUP FORM
+    const signupForm = document.querySelector("#signup-section form");
+    signupForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const firstName = this.querySelector('input[placeholder="First Name"]').value.trim();
+      const lastName = this.querySelector('input[placeholder="Last Name"]').value.trim();
+      const email = this.querySelector('input[placeholder="Email address"]').value.trim();
+      const password = this.querySelector('input[placeholder="Password"]').value.trim();
+
+      const newUser = {
+        name: firstName + ' ' + lastName,
+        email: email,
+        password: password,
+        img: 'https://randomuser.me/api/portraits/men/99.jpg', // default profile image
+        type: 'farmer'
+      };
+
+      localStorage.setItem('shambaUser', JSON.stringify(newUser));
+      sessionStorage.setItem('loggedUser', JSON.stringify(newUser));
+      window.location.href = "home.html";
+    });
+
+    // FORGOT PASSWORD
+    const forgotForm = document.querySelector("#forgot-section form");
+    forgotForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Reset link sent to your email!");
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
