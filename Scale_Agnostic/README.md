@@ -14,3 +14,6 @@ The program successfully connects my login/signup UI to my defined Jac sign_up a
 ### 🚀 Run
 * Make sure MongoDB is running
 * Serve your jac application-  `jac serve authenticate.jac`
+
+## Login page
+![login_page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/loginjpg.jpg)
