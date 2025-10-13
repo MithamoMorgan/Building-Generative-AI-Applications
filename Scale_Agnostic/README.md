@@ -20,3 +20,6 @@ The program successfully connects my login/signup UI to my defined Jac sign_up a
 
 ## Signup page
 ![Sign Up page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/signup.jpg)
+
+## Home page
+![Home page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/home.jpg)
