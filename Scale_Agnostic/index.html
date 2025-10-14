@@ -109,7 +109,7 @@
       }
 
       try {
-        const response = await fetch(`${API_BASE}/sign_up`, {
+        const response = await fetch(`${API_BASE}/Signup`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ fname, lname, email, password, cpassword })
@@ -134,7 +134,7 @@
       const password = this.querySelector('input[type="password"]').value.trim();
 
       try {
-        const response = await fetch(`${API_BASE}/login`, {
+        const response = await fetch(`${API_BASE}/Login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password })

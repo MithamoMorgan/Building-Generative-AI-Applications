@@ -1,4 +1,4 @@
-node User {
+node User{
     has fname: str;
     has lname: str;
     has email: str;
@@ -6,31 +6,34 @@ node User {
     has cpassword: str;
 }
 
-walker sign_up {
+walker Signup{
     has fname: str;
     has lname: str;
     has email: str;
     has password: str;
     has cpassword: str;
 
-    obj __specs__ {
-        static has methods: list = ["post"];
-        static has auth: bool = False;
+    obj __specs__{
+        static has methods : list = ["post"];
+        static has auth : bool = False;
         static has summary: str = "Register a new user";
     }
 
     can entry with `root entry{
-        # ensure all data is filled
-        if not (self.fname and self.lname and self.email and self.password and self.cpassword){
-            report  {"error": "Missing fname, lname, email or password"};
+        # Ensure all information has been filled
+        if not(self.fname and self.lname and self.email and self.password and self.cpassword){
+            report{"Error":"Fill in all details"};
             return;
         }
+
+        # Confirm password match
         if self.password != self.cpassword{
-            report  {"error": "password mismatch try again"};
+            report {"Error":"Password mismatch!"};
             return;
         }
-        # Create and connect to root so the node persists
-        new_user = User(self.fname, self.lname, email=self.email, password=self.password, cpassword=self.cpassword) ;
+
+        # Create node new_user and connect to root for persistence
+        new_user = User(fname=self.fname, lname=self.lname, email=self.email, password=self.password, cpassword=self.cpassword);
         here ++> new_user;
 
         # Queue for persistence
@@ -39,17 +42,17 @@ walker sign_up {
         # Commit to database
         commit();
 
-        # Do NOT return the password in the report
+        # Display user details except the password
         report {
-            "message": "✅ Account created successfully!",
-            "user": {"fname": new_user.fname, "lname": new_user.lname, "email": new_user.email}
+            "message" : "Account created successfully✅",
+            "user" : {"Fname": self.fname, "Lname": self.lname, "Email": self.email}
         };
-    }    
 
+    }
 }
 
 # User login (POST /walker/login)
-walker login {
+walker Login {
     has email: str;
     has password: str;
 
@@ -59,26 +62,19 @@ walker login {
         static has summary: str = "Login user";
     }
 
-    can entry with `root entry {
-        # Find all User nodes connected to root
-        all_users = [-->(`?User)];
-
-        # Search for a matching user
-        matched_user = None;
-        for user in all_users {
-            if user.email == self.email and user.password == self.password {
-                matched_user = user;
-                break;
-            }
-        }
-
-        if matched_user {
+    # Check if signup details match with login details
+    can entry with `root entry{
+        matched_users = [ user for user in [-->(`?User)] if (user.email == self.email) and (user.password == self.password) ];
+        if len(matched_users) > 0 {
+            user = matched_users[0];
             report {
-                "message": "✅ Login successful!",
-                "user": {"fname": matched_user.fname, "lname": matched_user.lname, "email": matched_user.email}
+                "message": "Login successful✅ ",
+                "user": {"fname": user.fname, "lname": user.lname, "email": user.email}
             };
         } else {
             report {"error": "Invalid email or password!"};
         }
     }
+
 }
+
