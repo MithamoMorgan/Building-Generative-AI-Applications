@@ -16,10 +16,10 @@ The program successfully connects my login/signup UI to my defined Jac sign_up a
 * Serve your jac application-  `jac serve authenticate.jac`
 
 ## Login page
-![login_page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/loginjpg.jpg)
+![login_page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic_Mini_Project/loginjpg.jpg)
 
 ## Signup page
-![Sign Up page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/signup.jpg)
+![Sign Up page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic_Mini_Project/signup.jpg)
 
 ## Home page
-![Home page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic/home.jpg)
+![Home page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Scale_Agnostic_Mini_Project/home.jpg)
