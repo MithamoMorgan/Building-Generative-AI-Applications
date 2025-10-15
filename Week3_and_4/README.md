@@ -1,3 +1,11 @@
-About Week 3 & 4
+# Week 3 & 4
 
-I have managed to create a chatbot that so far uses CLI to help farmers make plant and animal pest and disease diagnosis and also provide agricultural tips and advice. Note that the chatbot is specialized and not general since its specifically designed to help farmers only.
+## Farmer’s Plant & Animal Diagnosis Chatbot 👨‍🌾
+
+I have successfully developed a chatbot that currently runs via the command line (CLI) to assist farmers with diagnosing plant and animal pests and diseases, as well as providing agricultural tips and advice. This chatbot is specialized and focused solely on farming-related queries, rather than general-purpose conversation.
+
+## Improvements 🛠️
+
+* Develop a user-friendly interface (UI) using HTML, CSS, and JavaScript for easier interaction.
+
+* Add a feature to upload photos, allowing farmers to submit images of affected plants or animals for more accurate diagnosis.
