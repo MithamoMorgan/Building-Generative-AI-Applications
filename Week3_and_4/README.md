@@ -12,4 +12,4 @@ I have successfully developed a chatbot that currently runs via the command line
 
 ## 2. Login/Signup System with Jac API and MongoDB Integration🔒🗝️
 
-* Here is the project [page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Scale_Agnostic)
+* Here is the project [page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Scale_Agnostic_Mini_Project)
