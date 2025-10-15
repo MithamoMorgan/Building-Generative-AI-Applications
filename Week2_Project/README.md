@@ -8,3 +8,8 @@ Instead of using Streamlit for the user interface, I plan to integrate modern we
 ```bash
 jac serve server.jac
 ```
+### Then Visit
+```bash
+http://localhost:8000/docs
+```
+The endpoint will automatically appear in the Swagger UI, where you can view its details and test it interactively.
