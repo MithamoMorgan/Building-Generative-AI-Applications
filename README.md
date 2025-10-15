@@ -28,8 +28,8 @@ This replaces complicated code with a simple LLM call, eliminating the need for 
 ## 📂 Structure
 Each week of the seminar has its own folder with project files and a dedicated `README.md`.  
 - [Week 1](Week1_Project/README.md) – Diagnosis project  
-- [Week 2](Week2_Project/README.md) – Not Updated  
-- …  
+- [Week 2](Week2_Project/README.md) – Converting diagnosis Project program into a server API  
+- [Week3&4]()
 
 ---
 
