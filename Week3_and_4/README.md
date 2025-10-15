@@ -4,7 +4,7 @@
 
 I have successfully developed a chatbot that currently runs via the command line (CLI) to assist farmers with diagnosing plant and animal pests and diseases, as well as providing agricultural tips and advice. This chatbot is specialized and focused solely on farming-related queries, rather than general-purpose conversation.
 
-## 2. Farmer’s Plant & Animal Diagnosis API Server
+## 2. Farmer’s Plant & Animal Diagnosis API Server 🌐
 
 Secondly I have converted the chatbot above into a Jac walker exposed as a REST API endpoint that can be connected to a user interface (UI).Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week3_and_4/farmer_chatbot_server.jac)
 
