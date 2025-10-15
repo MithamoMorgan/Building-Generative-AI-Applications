@@ -28,7 +28,7 @@ This replaces complicated code with a simple LLM call, eliminating the need for 
 ## 📂 Structure
 Each week of the seminar has its own folder with project files and a dedicated `README.md`.  
 - [Week 1](Week1_Project/README.md) – Diagnosis project  
-- [Week 2](Week2_Project/README.md) – Converting diagnosis Project program into a server API  
+- [Week 2](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Week2_Project) – Converting diagnosis Project program into a server API  
 - [Week3&4](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Week3_and_4)- 2 mini_projects(CLI chatbot & Login/Signup Server API).
 
 ---
