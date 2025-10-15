@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JacHive | Account Access</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('images/hero-bg.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .auth-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .auth-card h2 {
+      color: #2d6a4f;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .form-control { border-radius: 10px; margin-bottom: 15px; }
+    .btn-main {
+      background-color: #ffd60a;
+      color: #000;
+      border-radius: 25px;
+      padding: 10px;
+      font-weight: 600;
+      width: 100%;
+      transition: 0.3s;
+    }
+    .btn-main:hover { background-color: #ffca3a; color: #000; }
+    .toggle-link { margin-top: 15px; font-size: 0.9rem; cursor: pointer; color: #2d6a4f; font-weight: 600; text-decoration: none; }
+    .toggle-link:hover { text-decoration: underline; }
+    .form-section { display: none; }
+    .form-section.active { display: block; }
+    .small-text { font-size: 0.9rem; color: #555; }
+  </style>
+</head>
+
+<body>
+  <div class="auth-card">
+    <!-- LOGIN SECTION -->
+    <div id="login-section" class="form-section active">
+      <h2>Welcome Back</h2>
+      <p class="small-text mb-4">Login to your JacHive account</p>
+      <form id="loginForm">
+        <input type="email" class="form-control" placeholder="Email address" required>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <button type="submit" class="btn btn-main mt-2">Login</button>
+      </form>
+      <p class="toggle-link" onclick="showSection('signup')">Don’t have an account? Sign up</p>
+    </div>
+
+    <!-- SIGNUP SECTION -->
+    <div id="signup-section" class="form-section">
+      <h2>Create Account</h2>
+      <p class="small-text mb-4">Join the JacHive community today</p>
+      <form id="signupForm">
+        <input type="text" class="form-control" placeholder="First Name" required>
+        <input type="text" class="form-control" placeholder="Last Name" required>
+        <input type="email" class="form-control" placeholder="Email address" required>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" required>
+        <button type="submit" class="btn btn-main mt-2">Sign Up</button>
+      </form>
+      <p class="toggle-link" onclick="showSection('login')">Already have an account? Login</p>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = "http://localhost:8000/walker";
+
+    function showSection(section) {
+      document.querySelectorAll('.form-section').forEach(div => div.classList.remove('active'));
+      document.getElementById(section + '-section').classList.add('active');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash;
+      if (hash === '#signup-section') showSection('signup');
+      else showSection('login');
+    });
+
+    // SIGNUP FORM
+    const signupForm = document.getElementById("signupForm");
+    signupForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const fname = this.querySelector('input[placeholder="First Name"]').value.trim();
+      const lname = this.querySelector('input[placeholder="Last Name"]').value.trim();
+      const email = this.querySelector('input[placeholder="Email address"]').value.trim();
+      const password = this.querySelector('input[placeholder="Password"]').value.trim();
+      const cpassword = this.querySelector('input[placeholder="Confirm Password"]').value.trim();
+
+      if(password !== cpassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_BASE}/Signup`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ fname, lname, email, password, cpassword })
+        });
+        const data = await response.json();
+        if(data.reports && data.reports[0].user) {
+          sessionStorage.setItem('loggedUser', JSON.stringify(data.reports[0].user));
+          window.location.href = "index.html";
+        } else {
+          alert(data.reports[0].error || "Signup failed!");
+        }
+      } catch(err) {
+        alert("Server error. Please try again.");
+      }
+    });
+
+    // LOGIN FORM
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value.trim();
+      const password = this.querySelector('input[type="password"]').value.trim();
+
+      try {
+        const response = await fetch(`${API_BASE}/Login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await response.json();
+        if(data.reports && data.reports[0].user) {
+          sessionStorage.setItem('loggedUser', JSON.stringify(data.reports[0].user));
+          window.location.href = "home.html";
+        } else {
+          alert(data.reports[0].error || "Invalid email or password!");
+        }
+      } catch(err) {
+        alert("Server error. Please try again.");
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
