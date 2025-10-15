@@ -12,4 +12,4 @@ jac serve server.jac
 ```bash
 http://localhost:8000/docs
 ```
-The endpoint will automatically appear in the Swagger UI, where you can view its details and test it interactively.
+The endpoint will automatically appear in the FastAPISwagger-UI, where you can view its details and test it interactively.
