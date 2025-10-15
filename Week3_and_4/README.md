@@ -1,4 +1,4 @@
-# Week 3 & 4
+# Week 3 & 4 📆
 
 ## 1. Farmer’s Plant & Animal Diagnosis Chatbot 👨‍🌾
 
@@ -10,6 +10,6 @@ I have successfully developed a chatbot that currently runs via the command line
 
 * Add a feature to upload photos, allowing farmers to submit images of affected plants or animals for more accurate diagnosis.
 
-## 2. Created a Login/Signup jac server API that allows user to Signup and Login to a page and store the data in MongoDB with a UI.
+## 2. Login/Signup System with Jac API and MongoDB Integration🔒🗝️
 
 * Here is the [code]()
