@@ -20,5 +20,5 @@ Secondly I have converted the chatbot above into a Jac walker exposed as a REST 
 
 ## 4 Updated Farmer’s Plant & Animal Diagnosis Chatbot 👨‍🌾
 
-* Here I updated the chatbot such that it has conversation memory to maintain context.Here is the [code]()
-* I also did the same for the walker API endpoint. Here is the [code]()
+* Here I updated the chatbot such that it has conversation memory to maintain context.Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week3_and_4/chatbot.jac).
+* I also did the same for the walker API endpoint. Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Week3_and_4/chatbot_server.jac).
