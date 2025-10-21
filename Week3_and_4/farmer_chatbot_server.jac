@@ -41,9 +41,6 @@ walker Converse {
         # Get AI response from the LLM
         self.last_answer = self.expert_response(self.last_question);
 
-        # Store this Q&A pair
-        # self.record();
-
         # Return answer as JSON
         report {
             "question": self.last_question,
