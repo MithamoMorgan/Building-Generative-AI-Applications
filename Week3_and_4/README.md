@@ -14,6 +14,11 @@ Secondly I have converted the chatbot above into a Jac walker exposed as a REST 
 
 * Add a feature to upload photos, allowing farmers to submit images of affected plants or animals for more accurate diagnosis.
 
-## 2. Login/Signup System with Jac API and MongoDB Integration🔒🗝️
+## 3. Login/Signup System with Jac API and MongoDB Integration🔒🗝️
 
 * Here is the project [page](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Scale_Agnostic_Mini_Project)
+
+## 4 Updated Farmer’s Plant & Animal Diagnosis Chatbot 👨‍🌾
+
+* Here I updated the chatbot such that it has conversation memory to maintain context.Here is the [code]()
+* I also did the same for the walker API endpoint. Here is the [code]()
