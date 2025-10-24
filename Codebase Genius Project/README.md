@@ -21,4 +21,4 @@ A system made up of multiple intelligent agents that can interact, collaborate, 
    
 3. `Code Analyzer`: Adds core code understanding. Reads files (eg  `.jac`, `.py`) and extracts function/class names.
    
-4. `DocGenie`: Combines outputs into a Markdown summary ie Produces visible results.
+4. `DocGenie`: Combines outputs into a Markdown summary ie Produces visible results/generate Markdown report.
