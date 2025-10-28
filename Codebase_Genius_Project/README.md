@@ -15,10 +15,18 @@ A system made up of multiple intelligent agents that can interact, collaborate, 
 
 # Agents ⚙️
 
-1. `Supervisor`: Required for coordination and control ie, orchestrates the workflow, receives GitHub URL, delegates tasks.
+1. `FileManager`: Handles all local file operations: cloning repositories, reading files, listing directory contents, and saving generated documentation.
    
 2. `Repo Mapper`: Clones repo + generates file tree + summarizes README. Gives structure and overview for next steps.
    
 3. `Code Analyzer`: Adds core code understanding. Reads files (eg  `.jac`, `.py`) and extracts function/class names.
    
 4. `DocGenie`: Combines outputs into a Markdown summary ie Produces visible results/generate Markdown report.
+
+5. `GenerateRepoDoc`: Required for coordination and control ie, orchestrates the workflow, receives GitHub URL, delegates tasks.
+
+# Codebase Genius Implementation 🛠️
+
+* The system produces a complete `docs.md` file under `./outputs/<repo_name>/`, providing a structured, readable overview of the repository, including installation, usage, key functions, and code relationships. Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Codebase_Genius_Project/genius.jac).
+
+* Note the 2 folders [repos](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Codebase_Genius_Project/repos) and [outputs](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Codebase_Genius_Project/outputs). They are created automatically in your working directory when the entire process runs successfully. They store cloned repos and docs.md files(for each cloned repo) respectively.
