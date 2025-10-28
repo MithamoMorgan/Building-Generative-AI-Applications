@@ -30,3 +30,11 @@ A system made up of multiple intelligent agents that can interact, collaborate, 
 * The system produces a complete `docs.md` file under `./outputs/<repo_name>/`, providing a structured, readable overview of the repository, including installation, usage, key functions, and code relationships. Here is the [code](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Codebase_Genius_Project/genius.jac).
 
 * Note the 2 folders [repos](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Codebase_Genius_Project/repos) and [outputs](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/tree/main/Codebase_Genius_Project/outputs). They are created automatically in your working directory when the entire process runs successfully. They store cloned repos and docs.md files(for each cloned repo) respectively.
+
+# Run 🚀
+
+`jac serve genius.jac`
+
+# UI 🖥️
+
+Next, I will be creating a UI
