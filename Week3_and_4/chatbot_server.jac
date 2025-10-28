@@ -1,4 +1,4 @@
-import from byllm { Model }
+import from byllm.Model { Model }
 
 # ---------- Initialize Gemini LLM ----------
 glob llm = Model(model_name="gemini/gemini-2.0-flash");
