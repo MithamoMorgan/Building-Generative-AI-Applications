@@ -37,4 +37,4 @@ A system made up of multiple intelligent agents that can interact, collaborate, 
 
 # UI 🖥️
 
-Next, I will be creating a UI
+You can access the UI code [here](https://github.com/MithamoMorgan/Building-Generative-AI-Applications/blob/main/Codebase_Genius_Project/genius.html) which is built using HTML,CSS, and JS.
