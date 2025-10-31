@@ -1,107 +1,136 @@
 ```markdown
-## Project Overview
+# Car Price Analysis in Kenya: Scraping, EDA, and Interactive Dashboard
 
-This project scrapes car data from Kai and Karo to analyze pricing trends in Kenya's car market. It features web scraping using BeautifulSoup, data storage in MySQL, and analysis with Pandas and visualization libraries. The project includes an interactive Tableau dashboard for exploratory data analysis. Users can run the project by cloning the repository, installing dependencies, and following the provided notebooks for data scraping, processing, and EDA.
+## 1. Project Overview
 
-## Repo Structure
+This project scrapes car data from Kai and Karo to analyze pricing trends in Kenya's car market. Key features include data processing, feature engineering, and exploratory data analysis, culminating in an interactive Tableau dashboard. Users can explore factors influencing car prices through the dashboard's filters. To use, clone the repository, install dependencies, and interact with the Tableau dashboard online.
 
+## 2. Repo Structure
+
+```markdown
+## Repository Structure
+
+- 📁 .git
+  - 📄 description
+  - 📄 config
+  - 📄 packed-refs
+  - 📁 hooks
+    - 📄 push-to-checkout.sample
+    - 📄 pre-applypatch.sample
+    - 📄 post-update.sample
+    - 📄 pre-receive.sample
+    - 📄 applypatch-msg.sample
+    - 📄 prepare-commit-msg.sample
+    - 📄 pre-push.sample
+    - 📄 pre-commit.sample
+    - 📄 sendemail-validate.sample
+    - 📄 fsmonitor-watchman.sample
+    - 📄 pre-merge-commit.sample
+    - 📄 pre-rebase.sample
+    - 📄 commit-msg.sample
+    - 📄 update.sample
+  - 📁 info
+    - 📄 exclude
+  - 📄 HEAD
+  - 📁 objects
+    - 📁 pack
+      - 📄 pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.rev
+      - 📄 pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.pack
+      - 📄 pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.idx
+  - 📄 index
+  - 📁 refs
+    - 📁 remotes
+      - 📁 origin
+        - 📄 HEAD
+    - 📁 heads
+      - 📄 master
+  - 📁 logs
+    - 📄 HEAD
+    - 📁 refs
+      - 📁 remotes
+        - 📁 origin
+          - 📄 HEAD
+      - 📁 heads
+        - 📄 master
+- 📁 .ipynb_checkpoints
+  - 📄 EDA_Descriptive-checkpoint.ipynb
+  - 📄 Scraping-checkpoint.ipynb
+  - 📄 preprocessing-checkpoint.ipynb
+- 📁 Images
+  - 📄 Tableau_desktop_icon.jpg
+  - 📄 img2.jpg
+  - 📄 img1.jpg
+  - 📄 header_img2.jpeg
+  - 📄 csv img.jpg
+- 📄 car_df.csv
+- 📄 Book1.twb
+- 📄 preprocessing.ipynb
+- 📄 README.md
+- 📄 ~Book1__13048.twbr
+- 📄 cleaned_df.csv
+- 📄 Scraping.ipynb
+- 📄 final_clean_car_data.csv
+- 📄 EDA_Descriptive.ipynb
+- 📄 requirements.txt
+
+## Languages Detected
+
+- Python (Jupyter Notebook)
+- Markdown
+- Tableau Workbook
+
+## Entry Points
+
+- `preprocessing.ipynb` - Likely contains data cleaning and transformation steps.
+- `Scraping.ipynb` - Probably responsible for web scraping data.
+- `EDA_Descriptive.ipynb` - Contains exploratory data analysis and descriptive statistics.
+- `README.md` - Provides an overview of the project.
+- `requirements.txt` - Lists the Python dependencies for the project.
 ```
-.
-├── Book1.twb
-├── .git
-│   ├── config
-│   ├── description
-│   ├── HEAD
-│   ├── hooks
-│   │   ├── applypatch-msg.sample
-│   │   ├── commit-msg.sample
-│   │   ├── fsmonitor-watchman.sample
-│   │   ├── post-update.sample
-│   │   ├── pre-applypatch.sample
-│   │   ├── pre-commit.sample
-│   │   ├── pre-merge-commit.sample
-│   │   ├── pre-push.sample
-│   │   ├── pre-rebase.sample
-│   │   ├── pre-receive.sample
-│   │   ├── prepare-commit-msg.sample
-│   │   ├── push-to-checkout.sample
-│   │   └── update.sample
-│   ├── index
-│   ├── info
-│   │   └── exclude
-│   ├── logs
-│   │   ├── HEAD
-│   │   ├── refs
-│   │   │   ├── heads
-│   │   │   │   └── master
-│   │   │   └── remotes
-│   │   │       └── origin
-│   │   │           └── HEAD
-│   │   └── refs
-│   │       └── heads
-│   │           └── master
-│   ├── objects
-│   │   └── pack
-│   │       ├── pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.idx
-│   │       ├── pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.pack
-│   │       └── pack-df6389af60fc16db40360da8fe3e1a0e929d01a0.rev
-│   └── packed-refs
-├── .ipynb_checkpoints
-│   ├── EDA_Descriptive-checkpoint.ipynb
-│   ├── preprocessing-checkpoint.ipynb
-│   └── Scraping-checkpoint.ipynb
-├── Images
-│   ├── csv img.jpg
-│   ├── header_img2.jpeg
-│   ├── img1.jpg
-│   ├── img2.jpg
-│   └── Tableau_desktop_icon.jpg
-├── Scraping.ipynb
-├── EDA_Descriptive.ipynb
-├── preprocessing.ipynb
-├── car_df.csv
-├── cleaned_df.csv
-├── final_clean_car_data.csv
-├── README.md
-├── requirements.txt
-└── ~Book1__13048.twbr
 
-```
-
-## Installation & Usage
+## 3. Installation & Usage
 
 1.  **Clone the repository:**
 
     ```bash
     git clone <repository_url>
-    cd <repository_name>
+    cd <repository_directory>
     ```
+
 2.  **Install dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
-3.  **Run the notebooks:**
 
-    *   `Scraping.ipynb`:  Scrapes car data from Kai and Karo.
-    *   `preprocessing.ipynb`: Cleans and prepares the scraped data.
-    *   `EDA_Descriptive.ipynb`: Performs exploratory data analysis.
-4.  **Tableau Dashboard:**
+3.  **Run the Jupyter Notebooks:**
 
-    *   `Book1.twb`: Contains the interactive Tableau dashboard for visualizing the data. Open with Tableau Desktop.
+    *   `Scraping.ipynb`:  Execute this notebook to scrape the car data.
+    *   `preprocessing.ipynb`: Run this notebook to clean and prepare the data.
+    *   `EDA_Descriptive.ipynb`:  Execute this for exploratory data analysis.
 
-## API / Key Functions
+4.  **Interact with the Tableau dashboard:**
 
-The project uses the following libraries and techniques:
+    *   Open `Book1.twb` (or the appropriate `.twb` file) in Tableau Desktop.
+    *   Alternatively, access the interactive dashboard online (if deployed).
 
-*   **BeautifulSoup:** For web scraping.
-*   **Pandas:** For data manipulation and analysis.
-*   **MySQL:** For data storage (implementation details are likely within the notebooks).
-*   **Visualization libraries (likely Matplotlib, Seaborn):**  For creating visualizations within the EDA notebook.
-*   **Tableau:** For creating the interactive dashboard.
+## 4. API / Key Functions
 
-The core functions are within the provided notebooks.  Specifically, the `Scraping.ipynb` notebook contains the web scraping logic, `preprocessing.ipynb` contains data cleaning and transformation steps, and `EDA_Descriptive.ipynb` contains the data analysis and visualization code.
+Since the project primarily uses Jupyter Notebooks, the "API" consists of the functions and data transformations within those notebooks. Key functions are likely within:
 
-## Code Relationships
+*   `Scraping.ipynb`: Functions to scrape data from Kai and Karo.
+*   `preprocessing.ipynb`: Functions for data cleaning, transformation, and feature engineering.
+*   `EDA_Descriptive.ipynb`: Functions for statistical analysis and data visualization.
 
-*No code relationships to display.*
+The project utilizes the Tableau workbook (`Book1.twb`) for interactive visualization.  This is not an API in the traditional sense but provides a user interface to explore the processed data.
+
+## 5. Code Relationships
+
+```json
+{
+  "nodes": [],
+  "edges": []
+}
+```
+
+The `ccg_json` indicates there are no explicit code relationships detected between files. This is common in projects primarily using Jupyter Notebooks for analysis, where the flow of data is sequential within each notebook rather than through inter-file function calls. The notebooks likely operate independently, with data flowing from scraping to preprocessing to EDA.
